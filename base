@@ -1,0 +1,40 @@
+/*produto(Codigo,Nome,Marca,Quantidade,Categoria,Preco).*/
+produto(001,'Achocolatado','Nescau',50,'Alimenticio',6.69).
+produto(002,'Achocolatado','Toddy',30,'Alimenticio',2.99).
+produto(003,'Arroz','Vasconcelos',20,'Alimenticio',2.99).
+produto(004,'Feijão','Vasconcelos',30,'Alimenticio',2.99).
+produto(005,'Açucar','Camil',20,'Alimenticio',2.99).
+produto(006,'Refrigerante','Coca Cola',50,'Alimenticio',2.99).
+produto(007,'Refrigerante','Kuat',30,'Alimenticio',2.99).
+produto(008,'Suco','Fresh',200,'Alimenticio',2.99).
+produto(009,'Suco','Del Valle',40,'Alimenticio',2.99).
+produto(010,'Bolacha','Nikito',30,'Alimenticio',2.99).
+produto(011,'Bolacha','Negresco',25,'Alimenticio',2.99).
+produto(012,'Achocolatado','Toddy',30,'Alimenticio',2.99).
+produto(013,'Desinfetante','Pinho','Limpeza',7.28).
+produto(014,'Desinfetante','Pato','Limpeza',6.98).
+produto(015,'Desinfetante','Sanol','Limpeza',7.20).
+produto(016,'Plaha de Aço','BomBril','Limpeza',3.90).
+produto(017,'Plaha de Aço','Ype','Limpeza',3.78).
+produto(018,'Plaha de Aço','Assolan','Limpeza',4.08).
+produto(019,'Esponja','ScotchBrite','Limpeza',4.50).
+produto(020,'Esponja','BomBril','Limpeza',4.30).
+produto(021,'Amaciante','Comfort','Limpeza',6.90).
+produto(022,'Amaciante','BomBril','Limpeza',5.99).
+produto(023,'Amaciante','Fofo','Limpeza',7.29).
+produto(024,'Amaciante','Soft','Limpeza',6.99).
+produto(025,'Amaciante','Tuff','Limpeza',7.10).
+produto(026,'Sabao em Po','Omo','Limpeza',5.99).
+produto(027,'Sabao em Po','Tixan Ype','Limpeza',5.89).
+produto(028,'Sabao em Po','Minuano','Limpeza',6.10).
+produto(029,'Sabao em Po','Brihante','Limpeza',6.18).
+produto(030,'Sabao em Po','Ace','Limpeza',5.50).
+
+local(X) :- 
+        produto(X,_,_,_,_,_),
+        X < 13,
+        write('A1').
+
+venda(X,Y,V,Z):-
+		produto(_,X,Y,Q,_,_),
+		Z is Q-V. 
